@@ -89,6 +89,30 @@
       .accent {
         color: var(--accent-2);
       }
+
+      .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+        margin-top: 30px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .legal-links a {
+        color: rgba(248, 244, 239, 0.86);
+        font-size: 0.94rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .legal-links a:hover,
+      .legal-links a:focus-visible {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
     </style>
   </head>
   <body>
@@ -97,6 +121,12 @@
       <p class="eyebrow">Ear Training App</p>
       <h1 id="coming-soon-title">Coming <span class="accent">soon</span>.</h1>
       <p>PractEar is getting ready for launch. The app and full website will be available soon.</p>
+      <nav class="legal-links" aria-label="Legal and support links">
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms-of-service/">Terms of Service</a>
+        <a href="/account-deletion/">Account Deletion</a>
+        <a href="mailto:support@practear.com">Contact Us</a>
+      </nav>
     </main>
   </body>
 </html>
