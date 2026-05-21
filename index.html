@@ -5,128 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="PractEar is coming soon."
+      content="PractEar is an ear training app for musicians with interactive exercises, progress tracking, and monthly rankings."
     >
     <meta name="theme-color" content="#090d19">
-    <title>PractEar | Coming Soon</title>
-    <style>
-      :root {
-        --bg: #090d19;
-        --surface: rgba(18, 24, 39, 0.82);
-        --line: rgba(132, 154, 214, 0.18);
-        --text: #f8f4ef;
-        --text-soft: rgba(248, 244, 239, 0.72);
-        --accent: #ffb000;
-        --accent-2: #ff756b;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        min-height: 100%;
-      }
-
-      body {
-        display: grid;
-        min-height: 100vh;
-        margin: 0;
-        place-items: center;
-        background:
-          radial-gradient(circle at 50% 18%, rgba(255, 176, 0, 0.16), transparent 34%),
-          radial-gradient(circle at 82% 72%, rgba(255, 117, 107, 0.12), transparent 30%),
-          var(--bg);
-        color: var(--text);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.5;
-        padding: 24px;
-      }
-
-      main {
-        width: min(100%, 680px);
-        padding: clamp(32px, 6vw, 58px);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--surface);
-        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
-        text-align: center;
-      }
-
-      .brand {
-        margin: 0 0 20px;
-        color: #fff;
-        font-size: clamp(2.25rem, 7vw, 4.4rem);
-        font-weight: 900;
-        letter-spacing: 0;
-        line-height: 0.95;
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 900;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2rem, 6vw, 3.8rem);
-        line-height: 1;
-        letter-spacing: 0;
-      }
-
-      p {
-        margin: 18px auto 0;
-        max-width: 520px;
-        color: var(--text-soft);
-        font-size: clamp(1rem, 2.4vw, 1.16rem);
-      }
-
-      .accent {
-        color: var(--accent-2);
-      }
-
-      .legal-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 18px;
-        margin-top: 30px;
-        padding-top: 22px;
-        border-top: 1px solid var(--line);
-      }
-
-      .legal-links a {
-        color: rgba(248, 244, 239, 0.86);
-        font-size: 0.94rem;
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      .legal-links a:hover,
-      .legal-links a:focus-visible {
-        color: #fff;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-      }
-    </style>
+    <title>PractEar | Ear Training App for Musicians</title>
+    <link rel="icon" href="assets/practear-logo.png">
+    <link rel="apple-touch-icon" href="assets/practear-logo.png">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main aria-labelledby="coming-soon-title">
-      <p class="brand">PractEar</p>
-      <p class="eyebrow">Ear Training App</p>
-      <h1 id="coming-soon-title">Coming <span class="accent">soon</span>.</h1>
-      <p>PractEar is getting ready for launch. The app and full website will be available soon.</p>
-      <nav class="legal-links" aria-label="Legal and support links">
-        <a href="/privacy-policy/">Privacy Policy</a>
-        <a href="/terms-of-service/">Terms of Service</a>
-        <a href="/account-deletion/">Account Deletion</a>
-        <a href="mailto:support@practear.com">Contact Us</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="PractEar home">
+        <img src="assets/practear-logo.png" alt="" aria-hidden="true">
+        <span>PractEar</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#download">Download</a>
+        <a href="#exercises">All Exercises</a>
+        <a href="#progress">Progress</a>
+        <a href="#leaderboard">Rankings</a>
+        <a href="#faq">FAQ</a>
       </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" hidden>
+      <a href="#download">Download</a>
+      <a href="#exercises">All Exercises</a>
+      <a href="#progress">Progress</a>
+      <a href="#leaderboard">Rankings</a>
+      <a href="#faq">FAQ</a>
+      <a href="about/">About</a>
+      <a href="feedback/">Feedback</a>
+    </div>
+
+    <main>
+      <section class="hero" id="download">
+        <div class="hero-copy">
+          <p class="eyebrow">Ear Training App</p>
+          <h1>The ear training app for <span class="accent">musicians</span></h1>
+          <p class="hero-lede">Train your ear with interactive exercises and real practice.</p>
+          <p class="hero-download">Launching soon on iOS and Android.</p>
+          <div class="hero-actions" aria-label="Store availability">
+            <span class="store-soon-badge" aria-label="App Store coming soon">
+              <span class="store-platform">App Store</span>
+              <span class="store-status">Coming soon</span>
+            </span>
+            <span class="store-soon-badge" aria-label="Google Play coming soon">
+              <span class="store-platform">Google Play</span>
+              <span class="store-status">Coming soon</span>
+            </span>
+          </div>
+        </div>
+        <div class="hero-showcase" aria-hidden="true">
+          <img class="phone-preview hero-phone-preview" src="assets/store-hero-phone.png" alt="">
+        </div>
+      </section>
+
+      <section class="section" id="exercises">
+        <div class="section-heading">
+          <p class="eyebrow">All Exercises</p>
+          <h2>Everything you need to develop your listening skills.</h2>
+          <p>Build pitch, rhythm, harmony, and theory recognition with focused practice modes.</p>
+          <a class="section-link" href="exercises/">Explore every mode</a>
+        </div>
+
+        <div class="exercise-grid large" aria-label="PractEar exercise modes">
+          <article class="exercise-card" style="--card-color: var(--ex-lilac)"><img class="exercise-icon" src="assets/exercise-icons/single-note.png" alt=""><strong>Single Note</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-mustard)"><img class="exercise-icon" src="assets/exercise-icons/double-notes.png" alt=""><strong>Double Notes</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-purple)"><img class="exercise-icon" src="assets/exercise-icons/triads.png" alt=""><strong>Triads</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-orange)"><img class="exercise-icon" src="assets/exercise-icons/seventh-chords.png" alt=""><strong>7th Chords</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-magenta)"><img class="exercise-icon" src="assets/exercise-icons/pitch-comparison.png" alt=""><strong>Pitch Comparison</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-emerald)"><img class="exercise-icon" src="assets/exercise-icons/dynamics.png" alt=""><strong>Dynamics</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-cyan)"><img class="exercise-icon" src="assets/exercise-icons/time-signature.png" alt=""><strong>Time Signature</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-mustard)"><img class="exercise-icon" src="assets/exercise-icons/bpm-trainer.png" alt=""><strong>BPM Trainer</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-orange)"><img class="exercise-icon" src="assets/exercise-icons/intervals.png" alt=""><strong>Intervals</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-periwinkle)"><img class="exercise-icon" src="assets/exercise-icons/interval-singing.png" alt=""><strong>Interval Singing</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-periwinkle)"><img class="exercise-icon" src="assets/exercise-icons/chords.png" alt=""><strong>Chords</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-olive)"><img class="exercise-icon" src="assets/exercise-icons/chord-inversion.png" alt=""><strong>Chord Inversion</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-teal)"><img class="exercise-icon" src="assets/exercise-icons/scales.png" alt=""><strong>Scales</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-pink)"><img class="exercise-icon" src="assets/exercise-icons/cadences.png" alt=""><strong>Cadences</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-rose)"><img class="exercise-icon" src="assets/exercise-icons/rhythm-imitation.png" alt=""><strong>Rhythm Imitation</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-coral)"><img class="exercise-icon" src="assets/exercise-icons/flashcards.png" alt=""><strong>Flashcards</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-amber)"><img class="exercise-icon" src="assets/exercise-icons/melody-dictation.png" alt=""><strong>Melody Dictation</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-emerald)"><img class="exercise-icon" src="assets/exercise-icons/note-singing.png" alt=""><strong>Note Singing</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-teal)"><img class="exercise-icon" src="assets/exercise-icons/note-identification.png" alt=""><strong>Note Identification</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-green)"><img class="exercise-icon" src="assets/exercise-icons/key-signatures.png" alt=""><strong>Key Signatures</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-coral)"><img class="exercise-icon" src="assets/exercise-icons/frequency-match.png" alt=""><strong>Frequency Match</strong></article>
+          <article class="exercise-card" style="--card-color: var(--ex-blue)"><img class="exercise-icon" src="assets/exercise-icons/chord-voice-dictation.png" alt=""><strong>Chord Voice Dictation</strong></article>
+        </div>
+      </section>
+
+      <section class="section progress-section" id="progress">
+        <div class="section-heading">
+          <p class="eyebrow">Progress</p>
+          <h2>Track your progress as you train.</h2>
+          <p>See your accuracy, improvement, and performance stats after each practice session.</p>
+        </div>
+        <div class="progress-visual">
+          <img class="phone-preview progress-phone-preview" src="assets/store-progress-phone.png" alt="PractEar weekly progress screen preview">
+        </div>
+      </section>
+
+      <section class="section leaderboard-section" id="leaderboard">
+        <div class="section-heading">
+          <p class="eyebrow">Rankings</p>
+          <h2>Climb the monthly <span class="accent">rankings</span>.</h2>
+          <p>Join the monthly rankings, earn points, and climb the board.</p>
+        </div>
+        <div class="leaderboard-visual">
+          <img class="phone-preview leaderboard-phone-preview" src="assets/leaderboard-phone.png" alt="PractEar monthly rankings screen preview">
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading centered">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Who is PractEar for?</summary>
+            <p>PractEar is designed for anyone who wants to improve their musical ear, from complete beginners to experienced musicians.</p>
+          </details>
+          <details>
+            <summary>Where can I download PractEar?</summary>
+            <p>PractEar will be available on the App Store and Google Play. Stay tuned for the official release.</p>
+          </details>
+          <details>
+            <summary>What results can I expect from PractEar?</summary>
+            <p>With consistent practice, you will improve your ability to recognize intervals, chords, scales, and rhythms.</p>
+          </details>
+          <details>
+            <summary>Can I use PractEar on multiple devices?</summary>
+            <p>Yes. When you sign in with the same account, your progress can be synced across multiple devices. Sync availability may vary depending on platform support.</p>
+          </details>
+          <details>
+            <summary>Does the app record my voice or audio?</summary>
+            <p>No. PractEar uses your microphone for real-time analysis during exercises, but no audio is recorded, stored, or shared.</p>
+          </details>
+          <details>
+            <summary>Is PractEar free to use?</summary>
+            <p>PractEar offers a free version with limited features. You can upgrade to Pro to unlock the full experience.</p>
+          </details>
+          <details>
+            <summary>What is included in the Pro version?</summary>
+            <p>The Pro version unlocks all exercises and allows unlimited practice sessions.</p>
+          </details>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-links" aria-label="Footer navigation">
+        <a class="footer-link" href="about/"><span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg></span>About PractEar</a>
+        <a class="footer-link" href="feedback/"><span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-360q17 0 28.5-11.5T520-400q0-17-11.5-28.5T480-440q-17 0-28.5 11.5T440-400q0 17 11.5 28.5T480-360Zm-40-160h80v-240h-80v240ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></span>Feedback</a>
+        <a class="footer-link" href="support/"><span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg></span>Contact Us</a>
+        <a class="footer-link" href="privacy-policy/"><span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></span>Privacy Policy</a>
+        <a class="footer-link" href="terms-of-service/"><span class="footer-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg></span>Terms of Service</a>
+      </div>
+      <p class="copyright">© 2026 PractEar.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
