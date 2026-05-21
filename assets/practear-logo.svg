@@ -1,0 +1,91 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="220" fill="#111111"/>
+
+  <!-- Subtle radial glow -->
+  <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+    <stop offset="0%" stop-color="#E8720A" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#E8720A" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1024" height="1024" rx="220" fill="url(#glow)"/>
+
+  <!-- Outer ear shape -->
+  <path
+    d="M512 120C341.34 120 200 261.34 200 432
+       C200 519.6 236.8 598.8 295.2 655.6
+       C328 686.8 352 726.8 352 770V844
+       C352 860.6 365.4 874 382 874H446
+       C462.6 874 476 860.6 476 844V772
+       C476 744.4 494.6 722 520 715.4
+       C626.8 686.6 720 592.6 720 432
+       C720 261.34 682.66 120 512 120Z"
+    fill="url(#earFill)"
+    opacity="0.13"
+  />
+  <path
+    d="M512 120C341.34 120 200 261.34 200 432
+       C200 519.6 236.8 598.8 295.2 655.6
+       C328 686.8 352 726.8 352 770V844
+       C352 860.6 365.4 874 382 874H446
+       C462.6 874 476 860.6 476 844V772
+       C476 744.4 494.6 722 520 715.4
+       C626.8 686.6 720 592.6 720 432
+       C720 261.34 682.66 120 512 120Z"
+    stroke="#E8720A"
+    stroke-width="28"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Inner ear canal curve -->
+  <path
+    d="M512 270C424 270 352 342 352 430
+       C352 476.4 372.4 518.6 403.6 548"
+    stroke="#E8720A"
+    stroke-width="22"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.55"
+  />
+
+  <!-- Sound wave arc 1 (closest) -->
+  <path
+    d="M578 340 C616 366 638 408 638 454"
+    stroke="#E8720A"
+    stroke-width="26"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.92"
+  />
+
+  <!-- Sound wave arc 2 -->
+  <path
+    d="M616 295 C674 334 706 398 706 472"
+    stroke="#E8720A"
+    stroke-width="24"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.62"
+  />
+
+  <!-- Sound wave arc 3 (farthest) -->
+  <path
+    d="M655 248 C734 300 780 398 780 510"
+    stroke="#E8720A"
+    stroke-width="20"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.32"
+  />
+
+  <!-- Eardrum center dot -->
+  <circle cx="484" cy="444" r="42" fill="#E8720A"/>
+  <circle cx="484" cy="444" r="28" fill="#F59E0B"/>
+
+  <defs>
+    <linearGradient id="earFill" x1="200" y1="120" x2="720" y2="874" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8720A"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg>
