@@ -398,25 +398,6 @@ h1 {
   object-fit: cover;
 }
 
-.carousel-shot {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  animation: phone-carousel 15s ease-in-out infinite;
-}
-
-.carousel-shot.shot-one {
-  animation-delay: 0s;
-}
-
-.carousel-shot.shot-two {
-  animation-delay: 5s;
-}
-
-.carousel-shot.shot-three {
-  animation-delay: 10s;
-}
-
 .hero-phone-stage {
   max-width: 380px;
 }
@@ -920,12 +901,6 @@ textarea {
   transform: translateY(0);
 }
 
-@keyframes phone-carousel {
-  0% { opacity: 0; }
-  6%, 29% { opacity: 1; }
-  35%, 100% { opacity: 0; }
-}
-
 @keyframes hero-rise {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1268,14 +1243,9 @@ textarea {
 
   .phone-stage,
   .phone-stage::before,
-  .carousel-shot,
   .hero-copy > * {
     opacity: 1;
     animation: none;
-  }
-
-  .carousel-shot.shot-one {
-    opacity: 1;
   }
 
   .js .reveal-target {
